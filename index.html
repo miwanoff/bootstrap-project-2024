@@ -20,7 +20,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <div class="container">
+      <div class="container d-flex justify-content-between">
         <a class="navbar-brand" href="#">
           <!-- <img
             src="./images/logo.png"
@@ -30,20 +30,33 @@
           /> -->
           <i class="fa-solid fa-rocket logo-nav pr-3 align-middle"></i>
         </a>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Active</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-flex justify-content-between"
+          id="collapsibleNavbar"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -150,8 +163,70 @@
             </button>
           </div>
         </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 col-12">
+          <div class="item_box card text-center my-5 p-3">
+            <img src="./images/dog2.png" class="card-img-top" alt="..." />
+            <h5 class="item_title pt-4">Harry Potter</h5>
+
+            <p>Price: <span class="item_price">120</span>$</p>
+            <button class="add_item btn btn-lg btn-warning" data-id="1">
+              Add to card
+            </button>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-12">
+          <div class="item_box card text-center my-5 p-3">
+            <img src="./images/dog4.png" class="card-img-top" alt="..." />
+            <h5 class="item_title pt-4">Nile</h5>
+            <p>Price: <span class="item_price">120</span>$</p>
+            <button class="add_item btn btn-lg btn-warning" data-id="5">
+              Add to card
+            </button>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 col-12">
+          <div class="item_box card text-center my-5 p-3">
+            <img src="./images/dog3.png" class="card-img-top" alt="..." />
+            <h5 class="item_title pt-4">Lord</h5>
+            <p>Price: <span class="item_price">600</span>$</p>
+            <button class="add_item btn btn-lg btn-warning" data-id="3">
+              Add to card
+            </button>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="container mt-5">
+      <div class="row justify-content-center mt-5" id="dogs"></div>
+
+      <button onclick="loadDogs(dogs)" class="m-auto my-5 d-block">
+        Load more dogs
+      </button>
+    </div>
+    <div class="mt-5 p-4 bg-dark text-white text-center">
+      <p>Footer</p>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./dogs.js"></script>
+
+    <script>
+      function loadDogs(dogs) {
+        let cards = "";
+        for (let i = 0; i < dogs.length; i++) {
+          cards += `<div class="dogWrap col-sm-4 col-12">
+          <div class="card text-center my-5 p-3">
+              <div class="card-title"><h5>${dogs[i].name}</h5></div>
+              <div class="image card-body"><img src="${dogs[i].imageCover}" /></div>
+              <div class="card-text"><p>${dogs[i].author}</p></div>
+          </div>
+      </div>\n`;
+        }
+        let dogsElement = document.getElementById("dogs");
+        dogsElement.innerHTML = cards;
+      }
+    </script>
   </body>
 </html>
