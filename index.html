@@ -55,39 +55,103 @@
       </div>
     </div>
 
-    <div id="wrapper" class="row my-5">
-      <div class="col-sm-12 col-md-6 col-lg-4 col-12">
-        <div class="item_box card text-center my-5 p-3">
-          <img src="./images/dog2.png" class="card-img-top" alt="..." />
-          <h5 class="item_title pt-4">Harry Potter</h5>
-
-          <p>Price: <span class="item_price">120</span>$</p>
-          <button class="add_item btn btn-lg btn-warning" data-id="1">
-            Add to card
-          </button>
+    <div class="container">
+      <!-- Carousel -->
+      <div id="demo" class="carousel slide m-auto my-5" data-bs-ride="carousel">
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#demo"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#demo"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#demo"
+            data-bs-slide-to="2"
+          ></button>
         </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-4 col-12">
-        <div class="item_box card text-center my-5 p-3">
-          <img src="./images/dog4.png" class="card-img-top" alt="..." />
-          <h5 class="item_title pt-4">Nile</h5>
-          <p>Price: <span class="item_price">120</span>$</p>
-          <button class="add_item btn btn-lg btn-warning" data-id="5">
-            Add to card
-          </button>
-        </div>
-      </div>
 
-      <div class="col-sm-12 col-md-6 col-lg-4 col-12">
-        <div class="item_box card text-center my-5 p-3">
-          <img src="./images/dog3.png" class="card-img-top" alt="..." />
-          <h5 class="item_title pt-4">Lord</h5>
-          <p>Price: <span class="item_price">600</span>$</p>
-          <button class="add_item btn btn-lg btn-warning" data-id="3">
-            Add to card
-          </button>
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./images/dog4.png"
+              alt="Los Angeles"
+              class="d-block w-100"
+            />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/dog5.png" alt="Chicago" class="d-block w-100" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/dog6.png" alt="New York" class="d-block w-100" />
+          </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <h3 class="text-center">Dogs</h3>
+      <div id="cards" class="row mb-5">
+        <div class="col-sm-12 col-md-6 col-lg-4 col-12">
+          <div class="item_box card text-center my-5 p-3">
+            <img src="./images/dog2.png" class="card-img-top" alt="..." />
+            <h5 class="item_title pt-4">Harry Potter</h5>
+
+            <p>Price: <span class="item_price">120</span>$</p>
+            <button class="add_item btn btn-lg btn-warning" data-id="1">
+              Add to card
+            </button>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-12">
+          <div class="item_box card text-center my-5 p-3">
+            <img src="./images/dog4.png" class="card-img-top" alt="..." />
+            <h5 class="item_title pt-4">Nile</h5>
+            <p>Price: <span class="item_price">120</span>$</p>
+            <button class="add_item btn btn-lg btn-warning" data-id="5">
+              Add to card
+            </button>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 col-12">
+          <div class="item_box card text-center my-5 p-3">
+            <img src="./images/dog3.png" class="card-img-top" alt="..." />
+            <h5 class="item_title pt-4">Lord</h5>
+            <p>Price: <span class="item_price">600</span>$</p>
+            <button class="add_item btn btn-lg btn-warning" data-id="3">
+              Add to card
+            </button>
+          </div>
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
